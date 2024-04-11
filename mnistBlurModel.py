@@ -43,21 +43,6 @@ train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
 val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 test_ds = test_ds.cache().prefetch(buffer_size=AUTOTUNE)
 
-# Build, compile, and train the model as before
-# model = models.Sequential([
-#     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, 3)),
-#     layers.MaxPooling2D((2, 2)),
-
-#     layers.Conv2D(64, (3, 3), activation='relu'),
-#     layers.MaxPooling2D((2, 2)),
-
-#     layers.Conv2D(64, (3, 3), activation='relu'),
-#     layers.Flatten(),
-#     layers.Dense(64, activation='relu'),
-#     layers.Dense(10)  # 10 classes for digits 0-9
-# ])
-
-
 # Standard LeNet5 Model
 def build_lenet5_model(input_shape=(28, 28, 1), num_classes=10):
     model = models.Sequential()

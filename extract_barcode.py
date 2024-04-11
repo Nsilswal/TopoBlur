@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-import symImg1
+import generate_symImg
 
 # Here I define a method which takes a diagonally symmetric image and extracts the barcode from it
 # We represent barcodes as a collection of intervals [(E_b,E_d)...], where each interval represents
